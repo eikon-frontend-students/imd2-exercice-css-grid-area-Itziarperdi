@@ -23,11 +23,12 @@ video {
 }
 
 /* Grid Container - Mobile First */
+
 .container {
   display: grid;
   grid-template-areas:
     "header"
-    "nav"
+    "nav "
     "main"
     "footer";
   grid-template-columns: 1fr;
@@ -195,4 +196,16 @@ video {
   font-size: 0.85rem;
   font-weight: 300;
   letter-spacing: 0.5px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-areas:
+      ". header"
+      "nav       main "
+      "footer    footer";
+    grid-template-columns: 200px 2fr;
+    background: white;
+  }
 }
